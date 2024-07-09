@@ -1,0 +1,115 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Si1_XfuXP1Pp",
+        "outputId": "121f337c-03c2-431f-9b2e-42900d8912c4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "NumPy Array:\n",
+            "[1 2 3 4 5]\n",
+            "\n",
+            "Pandas Series:\n",
+            "0    10\n",
+            "1    20\n",
+            "2    30\n",
+            "3    40\n",
+            "4    50\n",
+            "dtype: int64\n",
+            "\n",
+            "Pandas DataFrame:\n",
+            "    Name  Age      City\n",
+            "0   John   25  New York\n",
+            "1   Jane   32    London\n",
+            "2    Bob   41     Paris\n",
+            "3  Alice   28     Tokyo\n",
+            "4    Tom   35    Sydney\n",
+            "\n",
+            "NumPy Operations:\n",
+            "Minimum value in the array: 1\n",
+            "Maximum value in the array: 5\n",
+            "Mean value of the array: 3.0\n",
+            "\n",
+            "Pandas Operations:\n",
+            "Minimum value in the Series: 10\n",
+            "Maximum value in the Series: 50\n",
+            "Mean value of the Series: 30.0\n",
+            "Describe the DataFrame:\n",
+            "             Age\n",
+            "count   5.000000\n",
+            "mean   32.200000\n",
+            "std     6.220932\n",
+            "min    25.000000\n",
+            "25%    28.000000\n",
+            "50%    32.000000\n",
+            "75%    35.000000\n",
+            "max    41.000000\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "import pandas as pd\n",
+        "\n",
+        "# Creating a NumPy array\n",
+        "numpy_array = np.array([1, 2, 3, 4, 5])\n",
+        "print(\"NumPy Array:\")\n",
+        "print(numpy_array)\n",
+        "print()\n",
+        "\n",
+        "# Creating a Pandas Series\n",
+        "pandas_series = pd.Series([10, 20, 30, 40, 50])\n",
+        "print(\"Pandas Series:\")\n",
+        "print(pandas_series)\n",
+        "print()\n",
+        "\n",
+        "# Creating a Pandas DataFrame\n",
+        "data = {'Name': ['John', 'Jane', 'Bob', 'Alice', 'Tom'],\n",
+        "        'Age': [25, 32, 41, 28, 35],\n",
+        "        'City': ['New York', 'London', 'Paris', 'Tokyo', 'Sydney']}\n",
+        "pandas_df = pd.DataFrame(data)\n",
+        "print(\"Pandas DataFrame:\")\n",
+        "print(pandas_df)\n",
+        "print()\n",
+        "\n",
+        "# Performing NumPy operations\n",
+        "print(\"NumPy Operations:\")\n",
+        "print(\"Minimum value in the array:\", numpy_array.min())\n",
+        "print(\"Maximum value in the array:\", numpy_array.max())\n",
+        "print(\"Mean value of the array:\", numpy_array.mean())\n",
+        "print()\n",
+        "\n",
+        "# Performing Pandas operations\n",
+        "print(\"Pandas Operations:\")\n",
+        "print(\"Minimum value in the Series:\", pandas_series.min())\n",
+        "print(\"Maximum value in the Series:\", pandas_series.max())\n",
+        "print(\"Mean value of the Series:\", pandas_series.mean())\n",
+        "print(\"Describe the DataFrame:\")\n",
+        "print(pandas_df.describe())"
+      ]
+    }
+  ]
+}
